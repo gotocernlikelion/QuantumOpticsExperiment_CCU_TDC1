@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: S15lib
+Version: 0.2.0
+Summary: S-Fifteen Python Library
+Home-page: https://s-fifteen.com/
+Author: Mathias Seidler;
+Author-email: 
+License: MIT
+Requires-Python: >=3.6
+Provides-Extra: dev
+Provides-Extra: apps
+License-File: LICENSE

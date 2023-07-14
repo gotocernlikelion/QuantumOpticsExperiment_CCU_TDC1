@@ -1,2 +1,68 @@
-# QuantumOpticsExperiment_CCU_TDC1
-23.06. ~ 23.08. Summer Quantum Optics Experiment. Code for TDC1 (Coincidence Counting Unit). the experiment was conducted with highschool students of KSA(Korea Science Acadeny of KAIST; 한국과학영재학교)
+# S-Fifteen Python library
+
+S15lib is a Python package for controlling [S-Fifteen instruments](https://s-fifteen.com/).
+
+## Installation
+
+[Python](https://www.python.org) 3.6+ is required.
+Install the package directly with
+
+```
+pip install git+https://github.com/s-fifteen-instruments/pyS15.git
+```
+
+Alternatively, clone or [download](https://github.com/s-fifteen-instruments/pyS15/archive/refs/heads/master.zip)
+the repository and execute the following
+command from within the project directory.
+
+```
+pip install -e .
+```
+
+The library can be uninstalled with,
+
+```
+pip uninstall S15lib
+```
+
+## Usage
+
+### Via Python interpreter
+
+Here is a minimal script to interface with the S-Fifteen power meter:
+
+```
+>>> from S15lib.instruments import PowerMeter
+>>> pm = PowerMeter('/dev/serial/by-id/...')
+>>> pm.get_power(780)  # optical power in mW, with 780nm incident wavelength
+0.003378571428571428
+```
+
+More examples are available in the [`examples/`](examples) directory.
+
+### Via device application
+
+The [`apps/`](S15lib/apps) directory contains apps and graphical user interfaces (GUIs) for
+selected S-Fifteen devices, some of which require additional (graphing) dependencies that
+can installed with
+
+```
+pip install -e .[apps]
+```
+
+The apps can then be started either in the interpreter,
+
+```
+>>> from S15lib.apps import powermeter_app
+>>> powermeter_app.main()
+```
+
+or by downloading the apps from the [`apps/`](S15lib/apps) and starting them with,
+
+```
+python powermeter_app.py
+```
+
+## Development
+
+See the [developer guide](docs/developer.md).

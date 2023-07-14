@@ -1,0 +1,9 @@
+This Labview example uses NI-VISA. Please make sure NI-VISA is installed from NI website to enable serial communication in Labview.
+
+Counter : An interface to read counter values every time interval, with mode selection in SINGLES and PAIRS.
+SerialReadandWrite: A simple read and write VI that uses the basic commands.
+Timestamp : An interface to read timestamp values within the gate time, this loops every 0.5s and stores the read values 
+            for ONLY the last loop in a delimited text file. test.txt  is an example output of this function.
+writeread  : A sub-VI that simplifies read and write loops.
+writeread_timestamp : A sib-VI that is used like writeread, but the termination characters were removed specifically to be used in 
+                      Timestamp function.

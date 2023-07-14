@@ -1,0 +1,11 @@
+pyserial
+numpy
+
+[apps]
+PyQt5
+Pyqtgraph
+configargparse
+Cython
+
+[dev]
+pre-commit
