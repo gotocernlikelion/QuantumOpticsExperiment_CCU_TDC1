@@ -1,5 +1,6 @@
 # S-Fifteen Python library
 
+**All of the codes basically are written by S-fifteen corporation and simply modified in order to be customized with my experiment.  **
 S15lib is a Python package for controlling [S-Fifteen instruments](https://s-fifteen.com/).
 
 ## Installation
